@@ -4,6 +4,6 @@ p {
 
 .teemo {
     width: 25%;
-    height: 25%;
+    height: auto;
     float: right;
 }
