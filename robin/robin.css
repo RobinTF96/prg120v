@@ -2,7 +2,8 @@ p {
     color: blue;
 }
 
-teemo {
+.teemo {
     width: 25%;
     height: 25%;
+    float: right;
 }
