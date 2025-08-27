@@ -3,7 +3,7 @@ p {
 }
 
 .teemo {
-    width: 25%;
-    height: 100%;
+    width: 35%;
+    height: auto;
     float: left;
 }
