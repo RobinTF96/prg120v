@@ -2,10 +2,10 @@
 $svar1=$_POST ["svar1"];
 $svar2=$_POST ["svar2"];
 
-if ($svar==9) {
+if ($svar1==9) {
     print ("Riktig svar! 3 ganger 3 er 9.");
 } else {
-    print ("Feil svar. 3 ganger 3 er ikke $svar.");
+    print ("Feil svar. 3 ganger 3 er ikke $svar1.");
 }
 
 if ($svar2=="ja" or $svar2=="Ja" or $svar2=="JA" or $svar2=="j") {
