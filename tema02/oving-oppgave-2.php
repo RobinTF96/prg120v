@@ -1,6 +1,6 @@
 <?php
-$svar1=$_POST ["svar1"];
-$svar2=$_POST ["svar2"];
+$svar1=$_POST ["svar1"] ?? null;
+$svar2=$_POST ["svar2"] ?? null;
 
 if (!empty($svar1) && $svar1==9) {
     print ("Riktig svar! 3 ganger 3 er 9.");
