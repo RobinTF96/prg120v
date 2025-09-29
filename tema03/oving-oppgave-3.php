@@ -3,7 +3,9 @@ $opg1=$_POST["oppgave1"] ?? null;
 $opg2=$_POST["oppgave2"] ?? null;
 $opg3=$_POST["oppgave3"] ?? null;
 $opg4=$_POST["oppgave4"] ?? null;
+$opg5=$_POST["oppgave5"] ?? null;
 $sum=0;
+$gjennomsnitt=0;
 
 if ($opg1=="oppgave1") {
     for ($tall1 = 1; $tall1 <= 10; $tall1++) {
@@ -36,6 +38,18 @@ if ($opg4=="oppgave4") {
     for ($tall4 = 1; $tall4 <= 10; $tall4++) {
         $sum += $tall4;
     }
-    echo "Summen av alle tallene 1 - 10 er " . $sum . ".<br>";
+    echo "Summen av alle tallene fra 1 - 10 er " . $sum . ".<br>";
 }
+
+if ($opg5=="oppgave5") {
+    for ($tall5 = 1; $tall5 <= 10; $tall5++) {
+        $sum += $tall5;
+    }
+    $gjennomsnitt = $sum / $tall5 
+    echo "Summen av alle tallene fra 1 - 10 er " . $sum . ".<br>";
+    echo "Gjennomsnittet av tallene fra 1 - 10 er" . $gjennomsnitt . ".<br>";
+}
+
+
+
 ?>
