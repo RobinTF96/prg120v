@@ -5,7 +5,6 @@ $svar3=$_POST ["svar3"] ?? null;
 $gift=$_POST ["gift"] ?? null;
 $barn=$_POST ["barn"] ?? null;
 
-
 if (!empty($svar1)) {
     if ($svar1==9) {
         print ("Riktig svar! 3 ganger 3 er 9.<br>");
