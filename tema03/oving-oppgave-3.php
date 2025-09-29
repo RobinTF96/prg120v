@@ -10,7 +10,7 @@ if ($opg1=="oppgave1") {
 
 if ($opg2=="oppgave2") {
     for ($tall2 = 1; $tall2 <= 10; $tall2++) {
-        echo "Kvadratet av" . $tall . "er" . ($tall2 * $tall2) . "<br />";
+        echo "Kvadratet av" . $tall2 . "er" . ($tall2 * $tall2) . "<br />";
     }
 }
 ?>
