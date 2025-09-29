@@ -34,6 +34,6 @@ if ($opg4=="oppgave4") {
     for ($tall4 = 1; $tall4 <= 10; $tall4++) {
         $sum += $tall4;
     }
-    echo "Summen av alle tallene 1 - 10 er " . $sum . ".<br>"
+    echo "Summen av alle tallene 1 - 10 er " . $sum . ".<br>";
 }
 ?>
