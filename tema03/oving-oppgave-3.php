@@ -4,6 +4,7 @@ $opg2=$_POST["oppgave2"] ?? null;
 $opg3=$_POST["oppgave3"] ?? null;
 $opg4=$_POST["oppgave4"] ?? null;
 $opg5=$_POST["oppgave5"] ?? null;
+$opg6=$_POST["oppgave6"] ?? null;
 $sum=0;
 $gjennomsnitt=0;
 
@@ -50,6 +51,12 @@ if ($opg5=="oppgave5") {
     echo "Gjennomsnittet av tallene fra 1 - 10 er " . $gjennomsnitt . ".<br>";
 }
 
-
+if ($opg6=="oppgave6") {
+    $sum = 0;
+    for ($tall6 = 1; $tall6 <= $opg6; $tall6++) {
+        $tallArray[] = $tall6;
+    }
+    echo "Her teller vi til tallet ditt: <br>" . implode(", ", $tallArray) . ".<br>";
+}
 
 ?>
