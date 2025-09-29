@@ -4,7 +4,7 @@ $opg2=$_POST["oppgave2"] ?? null;
 $opg3=$_POST["oppgave3"] ?? null;
 $opg4=$_POST["oppgave4"] ?? null;
 $opg5=$_POST["oppgave5"] ?? null;
-$opg6=$_POST["oppgave6"] ?? null;
+$opg6=intVal($_POST["oppgave6"]);
 $sum=0;
 $gjennomsnitt=0;
 
