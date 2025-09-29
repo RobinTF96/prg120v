@@ -9,7 +9,7 @@ if ($opg1=="oppgave1") {
 }
 
 if ($opg2=="oppgave2") {
-    for ($tall2 = 1; $tall2 >= 1; $tall2++) {
+    for ($tall2 = 1; $tall2 <= 10; $tall2++) {
         echo ($tall2 * $tall2) . "<br />";
     }
 }
