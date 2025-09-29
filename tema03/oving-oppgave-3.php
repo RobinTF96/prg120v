@@ -51,7 +51,7 @@ if ($opg5=="oppgave5") {
     echo "Gjennomsnittet av tallene fra 1 - 10 er " . $gjennomsnitt . ".<br>";
 }
 
-if ($opg6==intVal($_POST["oppgave6"])) {
+if ($opg6>= 0) {
     $sum = 0;
     for ($tall6 = 1; $tall6 <= $opg6; $tall6++) {
         $tallArray[] = $tall6;
