@@ -29,4 +29,11 @@ if ($opg3=="oppgave3") {
     }
     echo "<br />";
 }
+
+if ($opg4=="oppgave4") {
+    for ($tall4 = 1; $tall4 <= 10; $tall4++) {
+        $sum += $tall4
+    }
+    echo "Summen av alle tallene 1 - 10 er " . $sum . ".<br>"
+}
 ?>
