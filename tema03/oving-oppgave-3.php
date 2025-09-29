@@ -45,7 +45,7 @@ if ($opg5=="oppgave5") {
     for ($tall5 = 1; $tall5 <= 10; $tall5++) {
         $sum += $tall5;
     }
-    $gjennomsnitt = $sum / $tall5 
+    $gjennomsnitt = $sum / $tall5;
     echo "Summen av alle tallene fra 1 - 10 er " . $sum . ".<br>";
     echo "Gjennomsnittet av tallene fra 1 - 10 er" . $gjennomsnitt . ".<br>";
 }
