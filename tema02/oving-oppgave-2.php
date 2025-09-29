@@ -1,7 +1,7 @@
 <?php
 $svar1=$_POST ["svar1"] ?? null;
 $svar2=$_POST ["svar2"] ?? null;
-$svar3=$_POST ["svar3"] ?? null;¨
+$svar3=$_POST ["svar3"] ?? null;
 $gift=$_POST ["gift"] ?? null;
 $barn=$_POST ["barn"] ?? null;
 
