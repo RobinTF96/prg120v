@@ -4,7 +4,7 @@ $svar2=$_POST ["svar2"] ?? null;
 
 if (!empty($svar1)) {
     if ($svar1==9) {
-        print ("Riktig svar! 3 ganger 3 er 9.");
+        print ("Riktig svar! 3 ganger 3 er 9." <br>);
     } else {
         print ("Feil svar. 3 ganger 3 er ikke $svar1.");
     }
