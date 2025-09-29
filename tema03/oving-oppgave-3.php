@@ -2,6 +2,7 @@
 $opg1=$_POST["oppgave1"] ?? null;
 $opg2=$_POST["oppgave2"] ?? null;
 $opg3=$_POST["oppgave3"] ?? null;
+$opg4=$_POST["oppgave4"] ?? null;
 
 if ($opg1=="oppgave1") {
     for ($tall1 = 1; $tall1 <= 10; $tall1++) {
