@@ -37,5 +37,5 @@ if (!empty($gift) && !empty($barn)) {
         print("Ugyldig valg. Vennligst velg gyldige alternativer.<br>");
     }
 }
-
+d
 ?>
