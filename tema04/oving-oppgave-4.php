@@ -78,10 +78,12 @@ function validerPostnr($postnr4) {
 }
 
 $gyldigPostnr=validerPostnr($postnr4);
-if (!empty($gyldigPostnr)) {
+if (!empty($postnr4)) {
+    if ($gyldigPostnr) {
     echo "Postnummeret $postnr4 er gyldig.";
-} else {
+    } else {
     echo "Postnummeret $postnr4 er ikke gyldig.";
+    }
 }
 
 //Oppgave 5
@@ -103,9 +105,11 @@ function validerKlassekode($klassekode5) {
 }
 
 $gyldigKlassekode=validerKlassekode($klassekode5);
-if (!empty($gyldigKlassekode)) {
-    echo "Klassekoden " . strtoupper($klassekode5) . " er gyldig.";
-} else {
-    echo "Klassekoden " . strtoupper($klassekode5) . " er ikke gyldig.";
+if (!empty($klassekode5)) {
+    if ($gyldigKlassekode) {
+        echo "Klassekoden " . strtoupper($klassekode5) . " er gyldig.";
+    } else {
+        echo "Klassekoden " . strtoupper($klassekode5) . " er ikke gyldig.";
+    }
 }
 ?>
