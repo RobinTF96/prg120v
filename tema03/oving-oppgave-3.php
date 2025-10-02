@@ -74,8 +74,8 @@ if (!empty($opg7_fornavn) && !empty($opg7_etternavn)) {
 }
 
 if (!empty($opg8_array)) {
-    echo "Tallene du skrev er:" . implode(", ", $opg8_array) . ".<br>";
+    echo "Tallene du skrev er: " . implode(", ", $opg8_array) . ".<br>";
     $reverse_opg8_array = array_reverse($opg8_array);
-    echo "Tallene du skrev i omvendt rekkefølge er:" . implode(", ", $reverse_opg8_array) . ".<br>";
+    echo "Tallene du skrev i omvendt rekkefølge er: " . implode(", ", $reverse_opg8_array) . ".<br>";
 }
 ?>
