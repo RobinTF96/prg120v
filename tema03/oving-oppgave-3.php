@@ -7,7 +7,9 @@ $opg5=$_POST["oppgave5"] ?? null;
 $opg6=intVal($_POST["oppgave6"] ?? 0);
 $opg7_fornavn=$_POST["fornavn"] ?? null;
 $opg7_etternavn=$_POST["etternavn"] ?? null;
-$sum=0;
+$opg8_array[]=intVal($_POST["t1", "t2", "t3", "t4", "t5"] ?? 0);
+$sum4=0;
+$sum5=0;
 $gjennomsnitt=0;
 
 if ($opg1=="oppgave1") {
@@ -40,22 +42,21 @@ if ($opg3=="oppgave3") {
 
 if ($opg4=="oppgave4") {
     for ($tall4 = 1; $tall4 <= 10; $tall4++) {
-        $sum += $tall4;
+        $sum4 += $tall4;
     }
-    echo "Summen av alle tallene fra 1 - 10 er " . $sum . ".<br>";
+    echo "Summen av alle tallene fra 1 - 10 er " . $sum4 . ".<br>";
 }
 
 if ($opg5=="oppgave5") {
     for ($tall5 = 1; $tall5 <= 10; $tall5++) {
-        $sum += $tall5;
+        $sum5 += $tall5;
     }
-    $gjennomsnitt = $sum / $tall5;
-    echo "Summen av alle tallene fra 1 - 10 er " . $sum . ".<br>";
+    $gjennomsnitt = $sum5 / $tall5;
+    echo "Summen av alle tallene fra 1 - 10 er " . $sum5 . ".<br>";
     echo "Gjennomsnittet av tallene fra 1 - 10 er " . $gjennomsnitt . ".<br>";
 }
 
 if ($opg6>= 1) {
-    $sum = 0;
     for ($tall6 = 1; $tall6 <= $opg6; $tall6++) {
         $tallArray[] = $tall6;
     }
@@ -66,4 +67,9 @@ if (!empty($opg7_fornavn) && !empty($opg7_etternavn)) {
     echo "Fornavn: " . $opg7_fornavn . "<br>" . "Etternavn: " . $opg7_etternavn . ".<br>";
 }
 
+if (!empty($opg8_array)) {
+    echo "Tallene du skrev er:" . implode(", ", $opg8_array) . ".<br>";
+    $reverse_opg8_array = array_reverse($opg8_array);
+    echo "Tallene du skrev i omvendt rekkefølge er:" . implode(", ", $reverse_opg8_array) . ".<br>";
+}
 ?>
