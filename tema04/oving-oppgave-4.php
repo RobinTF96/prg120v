@@ -2,8 +2,8 @@
 $postnr=$_POST["postnr"] ?? null;
 $klassekode=$_POST["klassekode"] ?? null;
 $emnekode=$_POST["emnekode"] ?? null;
-$mtall=substr($emnekode, 3, 3);
-$stall=substr($emnekode, 6, 1);
+$tallmidt=substr($emnekode, 3, 3);
+$tallslutt=substr($emnekode, 6, 1);
 
 
 //Oppgave 1 som sjekker om postnr har 4 siffer og kun tall.
@@ -47,11 +47,14 @@ if (!empty($emnekode)) {
     elseif (!preg_match('/^[a-zA-Z]{3}/', $emnekode)) {
         echo "Emnekoden " . strtoupper($emnekode) . " må starte med 3 bokstaver.";
     }
-    elseif (!ctype_digit($mtall)) {
+    elseif (!ctype_digit($tallmidt)) {
         echo "Emnekoden " . strtoupper($emnekode) . " har ikke 3 sifre i posisjon 4 - 6.";
     }
-    elseif (!ctype_digit($stall) && !ctype_alpha($stall)) {
+    elseif (!ctype_digit($tallslutt) && !ctype_alpha($stall)) {
         echo "Emnekoden " . strtoupper($emnekode) . " avsluttes ikke med en bokstav eller tall.";
+    }
+    elseif (preg_match('/^[a-zA-Z]{3}\d{3}[a-zA-Z0-9]$/', $emnekode)) {
+        echo "Emnekoden " . strtoupper($emnekode) . " er gyldig!";
     }
 }
 ?>
