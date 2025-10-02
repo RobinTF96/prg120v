@@ -78,7 +78,7 @@ function validerPostnr($postnr4) {
 }
 
 $gyldigPostnr=validerPostnr($postnr4);
-if ($gyldigPostnr) {
+if (!empty($gyldigPostnr)) {
     echo "Postnummeret $postnr4 er gyldig.";
 } else {
     echo "Postnummeret $postnr4 er ikke gyldig.";
@@ -103,7 +103,7 @@ function validerKlassekode($klassekode5) {
 }
 
 $gyldigKlassekode=validerKlassekode($klassekode5);
-if ($gyldigKlassekode) {
+if (!empty($gyldigKlassekode)) {
     echo "Klassekoden " . strtoupper($klassekode5) . " er gyldig.";
 } else {
     echo "Klassekoden " . strtoupper($klassekode5) . " er ikke gyldig.";
