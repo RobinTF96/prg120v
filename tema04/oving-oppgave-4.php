@@ -1,5 +1,6 @@
 <?php
-$postnr=$_POST["postnr"] ?? null;
+$postnr1=$_POST["postnr1"] ?? null;
+$postnr4=$_POST["postnr4"] ?? null;
 $klassekode=$_POST["klassekode"] ?? null;
 $emnekode=$_POST["emnekode"] ?? null;
 $tallmidt=substr($emnekode, 3, 3);
@@ -7,18 +8,18 @@ $tallslutt=substr($emnekode, 6, 1);
 
 
 //Oppgave 1 som sjekker om postnr har 4 siffer og kun tall.
-if (!empty($postnr)) {
-    if (strlen($postnr) == 4 && ctype_digit($postnr)) {
-        echo "Postnummeret $postnr er gyldig.";
+if (!empty($postnr1)) {
+    if (strlen($postnr1) == 4 && ctype_digit($postnr1)) {
+        echo "Postnummeret $postnr1 er gyldig.";
     } 
-    elseif (strlen($postnr) != 4) {
-        echo "Postnummeret $postnr må være eksakt 4 siffer langt.";
+    elseif (strlen($postnr1) != 4) {
+        echo "Postnummeret $postnr1 må være eksakt 4 siffer langt.";
     }
-    elseif (ctype_digit($postnr) == false) {
-        echo "Postnummeret $postnr må kun inneholde tall.";
+    elseif (ctype_digit($postnr1) == false) {
+        echo "Postnummeret $postnr1 må kun inneholde tall.";
     }
     else {
-        echo "Postnummeret $postnr er ikke gyldig.";
+        echo "Postnummeret $postnr1 er ikke gyldig.";
     }
 }
 
@@ -57,4 +58,29 @@ if (!empty($emnekode)) {
         echo "Emnekoden " . strtoupper($emnekode) . " er gyldig!";
     }
 }
+
+//Oppgave 4
+//Ta utgangspunkt i oppgave 1 og lag en funksjon validerPostnr(postnr) som validerer at postnummer
+//er fylt ut, består av nøyaktig 4 tegn og at alle tegnene er siffre.
+
+function validerPostnr($postnr4) {
+    $gyldigPostnr = false;
+    if (!empty($postnr4)) {
+        if (strlen($postnr4) == 4 && ctype_digit($postnr4)) {
+            $gyldigPostnr = true;
+            return $gyldigPostnr;
+        } 
+    }
+    else {
+        return $gyldigPostnr;
+    }
+}
+
+$gyldigPostnr=validerPostnr($postnr4);
+if ($gyldigPostnr) {
+    echo "Postnummeret $postnr4 er gyldig.";
+} else {
+    echo "Postnummeret $postnr4 er ikke gyldig.";
+}
+
 ?>
