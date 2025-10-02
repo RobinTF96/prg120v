@@ -1,7 +1,8 @@
 <?php
 $postnr1=$_POST["postnr1"] ?? null;
 $postnr4=$_POST["postnr4"] ?? null;
-$klassekode=$_POST["klassekode"] ?? null;
+$klassekode2=$_POST["klassekode2"] ?? null;
+$klassekode5=$_POST["klassekode5"] ?? null;
 $emnekode=$_POST["emnekode"] ?? null;
 $tallmidt=substr($emnekode, 3, 3);
 $tallslutt=substr($emnekode, 6, 1);
@@ -24,18 +25,18 @@ if (!empty($postnr1)) {
 }
 
 //Oppgave 2 som sjekker om klassekode har 3 tegn, begynner med to bokstaver og slutter med ett tall.
-if (!empty($klassekode)) {
-    if (strlen($klassekode) != 3) {
-        echo "Klassekoden " . strtoupper($klassekode) . " må være eksakt 3 tegn langt.";
+if (!empty($klassekode2)) {
+    if (strlen($klassekode2) != 3) {
+        echo "Klassekoden " . strtoupper($klassekode2) . " må være eksakt 3 tegn langt.";
     }
-    elseif (!preg_match('/^[a-zA-Z]{2}/', $klassekode)) {
-        echo "Klassekoden " . strtoupper($klassekode) . " må begynne med to bokstaver.";
+    elseif (!preg_match('/^[a-zA-Z]{2}/', $klassekode2)) {
+        echo "Klassekoden " . strtoupper($klassekode2) . " må begynne med to bokstaver.";
     }
-    elseif (!preg_match('/\d$/', $klassekode)) {
-        echo "Klassekoden " . strtoupper($klassekode) . " må slutte med ett tall.";
+    elseif (!preg_match('/\d$/', $klassekode2)) {
+        echo "Klassekoden " . strtoupper($klassekode2) . " må slutte med ett tall.";
     }
     else {
-        echo "Klassekoden " . strtoupper($klassekode) . " er gyldig.";
+        echo "Klassekoden " . strtoupper($klassekode2) . " er gyldig.";
     }
 }
 
@@ -83,4 +84,28 @@ if ($gyldigPostnr) {
     echo "Postnummeret $postnr4 er ikke gyldig.";
 }
 
+//Oppgave 5
+//Ta utgangspunkt i oppgave 2 og lag en funksjon validerKlassekode(klassekode) som validerer at
+//klassekode er fylt ut, består av nøyaktig 3 tegn og at de to første tegnene er bokstaver og det siste
+//tegnet er et siffer.
+
+function validerKlassekode($klassekode5) {
+    $gyldigKlassekode = false;
+    if (!empty($klassekode5)) {
+        if (strlen($klassekode5) == 3 && preg_match('/^[a-zA-Z]{2}\d$/', $klassekode5)) {
+            $gyldigKlassekode = true;
+            return $gyldigKlassekode;
+        } 
+    }
+    else {
+        return $gyldigKlassekode;
+    }
+}
+
+$gyldigKlassekode=validerKlassekode($klassekode5);
+if ($gyldigKlassekode) {
+    echo "Klassekoden " . strtoupper($klassekode5) . " er gyldig.";
+} else {
+    echo "Klassekoden " . strtoupper($klassekode5) . " er ikke gyldig.";
+}
 ?>
