@@ -22,16 +22,16 @@ if (!empty($postnr)) {
 //Oppgave 2 som sjekker om klassekode har 3 tegn, begynner med to bokstaver og slutter med ett tall.
 if (!empty($klassekode)) {
     if (strlen($klassekode) != 3) {
-        echo "Klassekoden $klassekode må være eksakt 3 tegn langt.";
+        echo "Klassekoden strtoupper($klassekode) må være eksakt 3 tegn langt.";
     }
     elseif (!preg_match('/^[a-zA-Z]{2}/', $klassekode)) {
-        echo "Klassekoden $klassekode må begynne med to bokstaver.";
+        echo "Klassekoden strtoupper($klassekode) må begynne med to bokstaver.";
     }
     elseif (!preg_match('/\d$/', $klassekode)) {
-        echo "Klassekoden $klassekode må slutte med ett tall.";
+        echo "Klassekoden " . strtoupper($klassekode) . " må slutte med ett tall.";
     }
     else {
-        echo "Klassekoden $klassekode er gyldig.";
+        echo "Klassekoden strtoupper($klassekode) er gyldig.";
     }
 }
 
