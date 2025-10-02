@@ -1,6 +1,9 @@
 <?php
 $postnr=$_POST["postnr"] ?? null;
+$klassekode=$_POST["klassekode"] ?? null;
 
+
+//Oppgave 1 som sjekker om postnr har 4 siffer og kun tall.
 if (!empty($postnr)) {
     if (strlen($postnr) == 4 && ctype_digit($postnr)) {
         echo "Postnummeret $postnr er gyldig.";
@@ -13,6 +16,22 @@ if (!empty($postnr)) {
     }
     else {
         echo "Postnummeret $postnr er ikke gyldig.";
+    }
+}
+
+//Oppgave 2 som sjekker om klassekode har 3 tegn, begynner med to bokstaver og slutter med ett tall.
+if (!empty($klassekode)) {
+    if (strlen($klassekode) != 3) {
+        echo "Klassekoden $klassekode må være eksakt 3 tegn langt.";
+    }
+    elseif (!preg_match('/^[a-zA-Z]{2}')) {
+        echo "Klassekoden $klassekode må begynne med to bokstaver.";
+    }
+    elseif (!preg_match('/\d$')) {
+        echo "Klassekoden $klassekode må slutte med ett tall.";
+    }
+    else {
+        echo "Klassekoden $klassekode er gyldig.";
     }
 }
 
