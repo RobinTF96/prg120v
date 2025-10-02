@@ -24,10 +24,10 @@ if (!empty($klassekode)) {
     if (strlen($klassekode) != 3) {
         echo "Klassekoden $klassekode må være eksakt 3 tegn langt.";
     }
-    elseif (!preg_match('/^[a-zA-Z]{2}')) {
+    elseif (!preg_match('/^[a-zA-Z]{2}', $klassekode)) {
         echo "Klassekoden $klassekode må begynne med to bokstaver.";
     }
-    elseif (!preg_match('/\d$')) {
+    elseif (!preg_match('/\d$', $klassekode)) {
         echo "Klassekoden $klassekode må slutte med ett tall.";
     }
     else {
