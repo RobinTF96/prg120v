@@ -50,7 +50,7 @@ if (!empty($emnekode)) {
     elseif (!ctype_digit($tallmidt)) {
         echo "Emnekoden " . strtoupper($emnekode) . " har ikke 3 sifre i posisjon 4 - 6.";
     }
-    elseif (!ctype_digit($tallslutt) && !ctype_alpha($stall)) {
+    elseif (!ctype_digit($tallslutt) && !ctype_alpha($tallslutt)) {
         echo "Emnekoden " . strtoupper($emnekode) . " avsluttes ikke med en bokstav eller tall.";
     }
     elseif (preg_match('/^[a-zA-Z]{3}\d{3}[a-zA-Z0-9]$/', $emnekode)) {
