@@ -1,18 +1,18 @@
 <?php
-$opg1=$_POST["oppgave1"] ?? null;
-$opg2=$_POST["oppgave2"] ?? null;
-$opg3=$_POST["oppgave3"] ?? null;
-$opg4=$_POST["oppgave4"] ?? null;
-$opg5=$_POST["oppgave5"] ?? null;
-$opg6=intVal($_POST["oppgave6"] ?? 0);
-$opg7_fornavn=$_POST["fornavn"] ?? null;
-$opg7_etternavn=$_POST["etternavn"] ?? null;
-$opg8_array= [
-    intVal($_POST["t1"] ?? 0);
-    intVal($_POST["t2"] ?? 0);
-    intVal($_POST["t3"] ?? 0);
-    intVal($_POST["t4"] ?? 0);
-    intVal($_POST["t5"] ?? 0);
+$opg1 = $_POST["oppgave1"] ?? null;
+$opg2 = $_POST["oppgave2"] ?? null;
+$opg3 = $_POST["oppgave3"] ?? null;
+$opg4 = $_POST["oppgave4"] ?? null;
+$opg5 = $_POST["oppgave5"] ?? null;
+$opg6 = intVal($_POST["oppgave6"] ?? 0);
+$opg7_fornavn = $_POST["fornavn"] ?? null;
+$opg7_etternavn = $_POST["etternavn"] ?? null;
+$opg8_array = [
+    intVal($_POST["t1"] ?? 0),
+    intVal($_POST["t2"] ?? 0),
+    intVal($_POST["t3"] ?? 0),
+    intVal($_POST["t4"] ?? 0),
+    intVal($_POST["t5"] ?? 0)
 ];
 $sum4=0;
 $sum5=0;
