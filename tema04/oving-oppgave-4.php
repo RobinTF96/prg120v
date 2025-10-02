@@ -4,8 +4,8 @@ $postnr4=$_POST["postnr4"] ?? null;
 $klassekode2=$_POST["klassekode2"] ?? null;
 $klassekode5=$_POST["klassekode5"] ?? null;
 $emnekode=$_POST["emnekode"] ?? null;
-$tallmidt=substr($emnekode, 3, 3);
-$tallslutt=substr($emnekode, 6, 1);
+$tallmidt=substr($emnekode, 3, 3) ?? null;
+$tallslutt=substr($emnekode, 6, 1) ?? null;
 
 
 //Oppgave 1 som sjekker om postnr har 4 siffer og kun tall.
