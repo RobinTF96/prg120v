@@ -4,8 +4,6 @@ $postnr4=$_POST["postnr4"] ?? null;
 $klassekode2=$_POST["klassekode2"] ?? null;
 $klassekode5=$_POST["klassekode5"] ?? null;
 $emnekode=$_POST["emnekode"] ?? null;
-$tallmidt=substr($emnekode, 3, 3) ?? null;
-$tallslutt=substr($emnekode, 6, 1) ?? null;
 
 
 //Oppgave 1 som sjekker om postnr har 4 siffer og kun tall.
@@ -43,6 +41,8 @@ if (!empty($klassekode2)) {
 //Oppgave 3 som sjokker om emnekode har:
 //7 tegn, begynner med 3 bokstaver, etterfulgt av 3 tall, og en bokstav eller siffer til slutt.
 if (!empty($emnekode)) {
+    $tallmidt=substr($emnekode, 3, 3);
+    $tallslutt=substr($emnekode, 6, 1);
     if (strlen($emnekode) != 7) {
         echo "Emnekoden må være eksakt 7 tegn.";
     }
