@@ -37,7 +37,7 @@ if (isset($_POST["slettStudenterKnapp"])) {
         }
         
         if (!empty($slettedeStudenter)) {
-            print ("Du har nå slettet følgende studenter fra databasen: " . implode(", ", $slettedeStudenter) . ".");
+            print ("Du har nå slettet følgende studenter fra databasen: " . implode(", ", $slettedeStudenter) . ". Oppdater siden for å se endringene.");
         }
     }
 }
