@@ -8,8 +8,9 @@
         include ("dynamiske-funksjoner.php"); listeboksStudiumkode(); ?>
     </select><br>
     <input type="submit" id="registrerEmneKnapp" name="registrerEmneKnapp" value="Registrer emne">
-    <input type="reset" value="Nullstill" id="nullstill" name="nullstill"><br>
 </form>
+
+<a href="oving-oppgave-5.html">Tilbake</a>
 
 
 <?php
