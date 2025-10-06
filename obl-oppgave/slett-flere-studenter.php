@@ -22,7 +22,7 @@ if (isset($_POST["slettStudenterKnapp"])) {
     else {
         for ($r = 0; $r < $antall; $r++) {
             $brukernavnValgt = $brukernavn[$r];
-            $sqlHent = "SELECT fornavn, etternavn FROM student WHERE brukernavn='$brukernavn';";
+            $sqlHent = "SELECT fornavn, etternavn FROM student WHERE brukernavn='$brukernavnValgt';";
             $sqlStudentNavn = mysqli_query($db, $sqlHent);
             $rad = mysqli_fetch_array($sqlStudentNavn);
             $fornavn = $rad["fornavn"];
