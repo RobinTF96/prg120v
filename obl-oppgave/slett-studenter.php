@@ -12,7 +12,6 @@
 
 <button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button><br>
 
-
 <?php
 if (isset($_POST["slettStudentKnapp"])) {
     include ("db-tilkobling.php");
