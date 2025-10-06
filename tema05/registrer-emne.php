@@ -32,10 +32,10 @@ if (isset($_POST["registrerEmneKnapp"])) {
             print ("Emnekode $emnekode er allerede registrert i databasen");
         }
         else {
-            $sqlSetning = "INSERT INTO emne (emnekode, emnenavn) VALUES ('$emnekode', '$emnenavn');";
+            $sqlSetning = "INSERT INTO emne (emnekode, emnenavn, studiekode) VALUES ('$emnekode', '$emnenavn', '$studiekode');";
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen");
 
-            print ("Emnekode $emnekode med navn $emnenavn er nå registrert i databasen.");
+            print ("Emnekode: $emnekode $emnenavn $studiekode er nå registrert i databasen.");
     }
 
 
