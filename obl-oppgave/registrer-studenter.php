@@ -5,7 +5,7 @@
     Fornavn: <input type="text" id="fornavn" name="fornavn" required><br>
     Etternavn: <input type="text" id="etternavn" name="etternavn" required><br>
     Klassekode: <select id="klassekode" name="klassekode" required>
-        <?php print ("<option value=>velg studium</option>");
+        <?php print ("<option value=>Velg studium</option>");
         include ("dynamiske-funksjoner.php"); listeboksKlassekode(); ?>
     </select><br>
     <input type="submit" id="registrerStudentKnapp" name="registrerStudentKnapp" value="Registrer student">
@@ -23,7 +23,7 @@ $klassekode = $_POST["klassekode"] ?? null;
 
 if (isset($_POST["registrerStudentKnapp"])) {
 
-    if (!$brukernavn || !$fornavn || $etternavn || !$klassekode) {
+    if (!$brukernavn || !$fornavn || !$etternavn || !$klassekode) {
         print ("Alle felt må fylles ut");
     }
     else {
