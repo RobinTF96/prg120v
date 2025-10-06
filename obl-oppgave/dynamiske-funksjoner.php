@@ -1,5 +1,5 @@
 <?php
-function listeboksKlassekode () {
+function listeboksKlassekode() {
     include ("db-tilkobling.php");
     $sqlSetning = "SELECT * FROM klasse ORDER BY klassekode;";
     $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
@@ -15,7 +15,7 @@ function listeboksKlassekode () {
     }    
 }
 
-function listeboksBrukernavn () {
+function listeboksBrukernavn() {
     include ("db-tilkobling.php");
     $sqlSetning = "SELECT * FROM student ORDER BY klassekode;";
     $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
@@ -33,6 +33,23 @@ function listeboksBrukernavn () {
     }    
 }
 
+function sjekklisteBrukernavn() {  
+   include ("db-tilkobling.php");
+   
+    $sqlSetning = "SELECT * FROM student ORDER BY klassekode;";
+    $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen.");
+
+    $antallRader = mysqli_num_rows($sqlResultat);
+
+    while ($rad = mysqli_fetch_array($sqlResultat)) {
+        $brukernavn = $rad["brukernavn"];
+        $fornavn = $rad["fornavn"];
+        $etternavn = $rad["etternavn"];
+        $klassekode = $rad["klassekode"];
+
+        print ("<input type='checkbox' id='$brukernavn' name='brukernavn[]' value='$brukernavn'> $fornavn $etternavn $klassekode<br>");
+    }
+}
 
 
 
