@@ -2,9 +2,9 @@
 
 <h3>Slett emne</h3>
 
-<form method="post" action="" id="slettEmneSkjema" name="slettEmneSkjema">
+<form method="post" action="" id="slettEmneSkjema" name="slettEmneSkjema" onSubmit="return bekreft()">
     Studiumkode: <input type="text" id="emnekode" name="emnekode" required><br>
-    <input type="submit" id="slettEmneKnapp" name="slettEmneKnapp" value="Slett emne" onSubmit="return bekreft()">
+    <input type="submit" id="slettEmneKnapp" name="slettEmneKnapp" value="Slett emne">
     <input type="reset" value="Nullstill" id="nullstill" name="nullstill"><br>
 </form>
 
