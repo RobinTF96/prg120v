@@ -40,15 +40,15 @@ if (isset($_POST["registrerStudentKnapp"])) {
         include ("db-tilkobling.php");
 
         $sqlSetning = "SELECT * FROM student WHERE brukernavn='$brukernavn';";
-        $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
+        $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen.");
         $antallRader = mysqli_num_rows($sqlResultat);
 
         if ($antallRader != 0) {
-            print ("Brukernavn \"$brukernavn\" er allerede registrert i databasen");
+            print ("Brukernavn \"$brukernavn\" er allerede registrert i databasen.");
         }
         else {
             $sqlSetning = "INSERT INTO student (brukernavn, fornavn, etternavn, klassekode) VALUES ('$brukernavn', '$fornavn', '$etternavn', '$klassekode');";
-            mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen");
+            mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen.");
 
             print ("Følgende er nå lagt til i databasen:<br>Brukernavn: $brukernavn<br>Fornavn: $fornavn<br>Etternavn: $etternavn<br>Klassekode: $klassekode");
     }

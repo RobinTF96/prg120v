@@ -29,7 +29,7 @@ if (isset($_POST["registrerKlasseKnapp"])) {
         $antallRader = mysqli_num_rows($sqlResultat);
 
         if ($antallRader != 0) {
-            print ("Klassekode: \"$klassekode\" er allerede registrert med klassenavn: \"$klassenavn\" og studiekode: \"$studiumkode\" i databasen");
+            print ("Klassekode: \"$klassekode\" er allerede registrert med klassenavn: \"$klassenavn\" og studiekode: \"$studiumkode\" i databasen.");
         }
         else {
             $sqlSetning = "INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode');";
