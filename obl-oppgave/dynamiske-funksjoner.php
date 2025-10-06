@@ -17,7 +17,7 @@ function listeboksKlassekode () {
 
 function listeboksBrukernavn () {
     include ("db-tilkobling.php");
-    $sqlSetning = "SELECT * FROM brukernavn ORDER BY brukernavn;";
+    $sqlSetning = "SELECT * FROM student ORDER BY brukernavn;";
     $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
     $antallRader = mysqli_num_rows($sqlResultat);
 
