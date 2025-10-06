@@ -3,9 +3,10 @@
 <h3>Slett studium</h3>
 
 <form method="post" action="" id="slettStudiumSkjema" name="slettStudiumSkjema" onSubmit="return bekreft()">
-    Studiumkode: <input type="text" id="studiumkode" name="studiumkode" required><br>
-    <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium">
-    <input type="reset" value="Nullstill" id="nullstill" name="nullstill"><br>
+    Studiumkode: <select id="studiumkode" name="studiumkode">
+        <?php print ("<option value=>Velg studium</option>");
+        include ("dynamiske-funksjoner.php"); listeboksStudiumkode(); ?>
+    <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium"><br>
 </form>
 
 
