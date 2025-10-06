@@ -6,7 +6,7 @@
     <input type="submit" id="registrerStudiumKnapp" name="registrerStudiumKnapp" value="Registrer studium">
 </form>
 
-<form method="post" action="tema05/oving-oppgave-5.php" id="hjem" name="hjem">
+<form method="post" action="tema05/oving-oppgave-5.html" id="hjem" name="hjem">
     <input type="submit" value="Tilbake" id="hjemKnapp" name="hjemKnapp">
 </form> <br>
 
