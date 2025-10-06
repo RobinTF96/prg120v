@@ -9,6 +9,7 @@
 
 
 <?php
+include ("db-tilkobling.php");
 header('Content-type: text/html; charset=utf-8');
 
 if (isset($_POST["registrerStudiumKnapp"])) {
@@ -19,7 +20,6 @@ if (isset($_POST["registrerStudiumKnapp"])) {
         print ("Alle felt må fylles ut");
     }
     else {
-        include ("db-tilkobling.php");
 
         $sqlSetning = "SELECT * FROM studium WHERE studiumkode='$studiumkode';";
         $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
