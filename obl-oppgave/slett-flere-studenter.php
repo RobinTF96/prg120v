@@ -24,17 +24,20 @@ if (isset($_POST["slettStudenterKnapp"])) {
             $brukernavnValgt = $brukernavn[$r];
             $sqlHent = "SELECT fornavn, etternavn FROM student WHERE brukernavn='$brukernavnValgt';";
             $sqlStudentNavn = mysqli_query($db, $sqlHent);
-            $rad = mysqli_fetch_array($sqlStudentNavn);
-            $fornavn = $rad["fornavn"];
-            $etternavn = $rad["etternavn"];
 
-            $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavnValgt';";
-            mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen");
-            $slettedeStudenter[] = "$fornavn $etternavn";
+            
+            if ($rad = mysqli_fetch_array($sqlStudentNavn)) {
+                $fornavn = $rad["fornavn"];
+                $etternavn = $rad["etternavn"];
+
+                $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavnValgt';";
+                mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen");
+                $slettedeStudenter[] = "$fornavn $etternavn";
+            }
         }
         
         if (!empty($slettedeStudenter)) {
-            print ("Du har nå slettet følgende studenter fra databasen: " . implode(", ", $slettedeStudenter) . "."");
+            print ("Du har nå slettet følgende studenter fra databasen: " . implode(", ", $slettedeStudenter) . ".");
         }
     }
 }
