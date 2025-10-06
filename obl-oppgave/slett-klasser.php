@@ -10,7 +10,7 @@
     <input type="submit" id="slettKlasseKnapp" name="slettKlasseKnapp" value="Slett klasse"><br>
 </form>
 
-<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
+<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button><br>
 
 
 <?php
