@@ -29,7 +29,7 @@ function listeboksBrukernavn () {
         $klassekode = $rad["klassekode"];
 
 
-        print ("<option value='$brukernavn'>$brukernavn $fornavn $etternavn $klassekode</option>");
+        print ("<option value='$brukernavn'>$klassekode $fornavn $etternavn</option>");
     }    
 }
 
