@@ -16,6 +16,10 @@
 
 <?php
 
+$brukernavn = $_POST["brukernavn"] ?? null;
+$fornavn = $_POST["fornavn"] ?? null;
+$etternavn = $_POST["etternavn"] ?? null;
+$klassekode = $_POST["klassekode"] ?? null;
 
 if (!empty($brukernavn)) {
     $brukernavn = strtolower($_POST["brukernavn"]);
@@ -26,7 +30,6 @@ if (!empty($fornavn)) {
 if (!empty($etternavn)) {
     $etternavn = ucfirst(strtolower($_POST["etternavn"]));
 }
-$klassekode = $_POST["klassekode"] ?? null;
 
 if (isset($_POST["registrerStudentKnapp"])) {
 
