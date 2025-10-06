@@ -33,9 +33,9 @@ if (isset($_POST["registrerStudiumKnapp"])) {
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen");
 
             print ("Studiumkode $studiumkode med navn $studiumnavn er nå registrert i databasen.");
+        }
+
+
     }
-
-
-}
 }
 ?>
