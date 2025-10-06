@@ -11,7 +11,7 @@
 
 <?php
 if (isset($_POST["slettEmneKnapp"])) {
-    include ("tema05/db-tilkobling.php");
+    include ("db-tilkobling.php");
     $emnekode = $_POST["emnekode"];
 
     $sqlSetning = "DELETE FROM emne WHERE emnekode='$emnekode';";

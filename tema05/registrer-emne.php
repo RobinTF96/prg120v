@@ -22,7 +22,7 @@ if (isset($_POST["registrerEmneKnapp"])) {
         print ("Alle felt må fylles ut");
     }
     else {
-        include ("tema05/db-tilkobling.php");
+        include ("db-tilkobling.php");
 
         $sqlSetning = "SELECT * FROM emne WHERE emnekode='$emnekode';";
         $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");

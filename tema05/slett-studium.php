@@ -11,7 +11,7 @@
 
 <?php
 if (isset($_POST["slettStudiumKnapp"])) {
-    include ("tema05/db-tilkobling.php");
+    include ("db-tilkobling.php");
     $studiumkode = $_POST["studiumkode"];
 
     $sqlSetning = "DELETE FROM studium WHERE studiumkode='$studiumkode';";
