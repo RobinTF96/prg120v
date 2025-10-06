@@ -6,7 +6,7 @@
     <input type="submit" id="registrerStudiumKnapp" name="registrerStudiumKnapp" value="Registrer studium">
 </form>
 
-<a href="oving-oppgave-5.html">Tilbake</a>
+<button type="button" onclick="window.location.href='oving-oppgave-5.html'">Tilbake</button>
 
 
 <?php

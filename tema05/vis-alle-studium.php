@@ -20,3 +20,4 @@ print ("</table>");
 
 
 ?>
+<button type="button" onclick="window.location.href='oving-oppgave-5.html'">Tilbake</button>

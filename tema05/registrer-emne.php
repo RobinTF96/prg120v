@@ -10,7 +10,7 @@
     <input type="submit" id="registrerEmneKnapp" name="registrerEmneKnapp" value="Registrer emne">
 </form>
 
-<a href="oving-oppgave-5.html">Tilbake</a>
+<button type="button" onclick="window.location.href='oving-oppgave-5.html'">Tilbake</button>
 
 
 <?php

@@ -10,6 +10,8 @@
     <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium"><br>
 </form>
 
+<button type="button" onclick="window.location.href='oving-oppgave-5.html'">Tilbake</button>
+
 
 <?php
 if (isset($_POST["slettStudiumKnapp"])) {
