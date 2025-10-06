@@ -7,7 +7,7 @@
         <?php print ("<option value=>Velg student</option>");
         include ("dynamiske-funksjoner.php"); listeboksBrukernavn(); ?>
     </select><br>
-    <input type="submit" id="slettStudentKnapp" name="slettStudentKnapp" value="Slett emne"><br>
+    <input type="submit" id="slettStudentKnapp" name="slettStudentKnapp" value="Slett student"><br>
 </form>
 
 <button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button><br>
