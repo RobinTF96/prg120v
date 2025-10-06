@@ -1,7 +1,7 @@
 <?php
 $host = getenv('DB_HOST');
 $username = getenv('DB_USER');
-$password = "6887rofin5165";
+$password = getenv('DB_PASS');//"6887rofin5165";
 $database = getenv('DB_DATABASE');
 
 print("Host: $host, User: $username, Password: $password, Database: $database<br>");
