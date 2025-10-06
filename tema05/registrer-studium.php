@@ -19,7 +19,7 @@ if (isset($_POST["registrerStudiumKnapp"])) {
         print ("Alle felt må fylles ut");
     }
     else {
-        include ("tema05/db-tilkobling.php");
+        include ("db-tilkobling.php");
 
         $sqlSetning = "SELECT * FROM studium WHERE studiumkode='$studiumkode';";
         $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
