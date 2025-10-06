@@ -1,27 +1,27 @@
 <script src="funksjoner.js"></script>
 
-<h3>Slett emne</h3>
+<h3>Slett student</h3>
 
-<form method="post" action="" id="slettEmneSkjema" name="slettEmneSkjema" onSubmit="return bekreft()">
-    Emne: <select id="emnekode" name="emnekode">
-        <?php print ("<option value=>Velg emne</option>");
-        include ("dynamiske-funksjoner.php"); listeboksEmnekode(); ?>
+<form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">
+    Student: <select id="brukernavn" name="brukernavn">
+        <?php print ("<option value=>Velg student</option>");
+        include ("dynamiske-funksjoner.php"); listeboksBrukernavn(); ?>
     </select><br>
-    <input type="submit" id="slettEmneKnapp" name="slettEmneKnapp" value="Slett emne"><br>
+    <input type="submit" id="slettStudentKnapp" name="slettStudentKnapp" value="Slett emne"><br>
 </form>
 
-<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
+<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button><br>
 
 
 <?php
-if (isset($_POST["slettEmneKnapp"])) {
+if (isset($_POST["slettStudentKnapp"])) {
     include ("db-tilkobling.php");
-    $emnekode = $_POST["emnekode"];
+    $brukernavn = $_POST["brukernavn"];
 
-    $sqlSetning = "DELETE FROM emne WHERE emnekode='$emnekode';";
+    $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavn';";
     mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen");
 
-    print ("Emnekode $emnekode er nå slettet fra databasen.");
+    print ("Student med brukernavn $brukernavn er nå slettet fra databasen.");
 }
 
 ?>

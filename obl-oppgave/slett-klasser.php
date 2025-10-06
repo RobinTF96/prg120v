@@ -1,27 +1,27 @@
 <script src="funksjoner.js"></script>
 
-<h3>Slett studium</h3>
+<h3>Slett klasse</h3>
 
-<form method="post" action="" id="slettStudiumSkjema" name="slettStudiumSkjema" onSubmit="return bekreft()">
-    Studiumkode: <select id="studiumkode" name="studiumkode">
-        <?php print ("<option value=>Velg studium</option>");
-        include ("dynamiske-funksjoner.php"); listeboksStudiumkode(); ?>
+<form method="post" action="" id="slettKlasseSkjema" name="slettKlasseSkjema" onSubmit="return bekreft()">
+    Klassekode: <select id="klassekode" name="klassekode">
+        <?php print ("<option value=>Velg klassekode</option>");
+        include ("dynamiske-funksjoner.php"); listeboksKlassekode(); ?>
     </select><br>
-    <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium"><br>
+    <input type="submit" id="slettKlasseKnapp" name="slettKlasseKnapp" value="Slett klasse"><br>
 </form>
 
 <button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
 
 
 <?php
-if (isset($_POST["slettStudiumKnapp"])) {
+if (isset($_POST["slettKlasseKnapp"])) {
     include ("db-tilkobling.php");
-    $studiumkode = $_POST["studiumkode"];
+    $klassekode = $_POST["klassekode"];
 
-    $sqlSetning = "DELETE FROM studium WHERE studiumkode='$studiumkode';";
-    mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen");
+    $sqlSetning = "DELETE FROM klasse WHERE klassekode='$klassekode';";
+    mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen. Sjekk at klassen ikke er i bruk av noen studenter.");
 
-    print ("Studiumkode $studiumkode er nå slettet fra databasen.");
+    print ("Klassekode $klassekode er nå slettet fra databasen.");
 }
 
 ?>
