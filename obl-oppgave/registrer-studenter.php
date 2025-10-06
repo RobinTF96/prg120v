@@ -1,4 +1,4 @@
-<h3>Registrer studium</h3>
+<h3>Registrer student</h3>
 
 <form method="post" action="" id="registrerStudentSkjema" name="registrerStudentSkjema">
     Brukernavn: <input type="text" id="brukernavn" name="brukernavn" required><br>
@@ -16,10 +16,10 @@
 
 <?php
 
-$brukernavn = $_POST["brukernavn"] ?? null;
-$fornavn = $_POST["fornavn"] ?? null;
-$etternavn = $_POST["etternavn"] ?? null;
-$klassekode = $_POST["klassekode"] ?? null;
+$brukernavn = strtolower($_POST["brukernavn"]);
+$fornavn = ucfirst(strtolower($_POST["fornavn"]));
+$etternavn = ucfirst(strtolower($_POST["etternavn"]));
+$klassekode = $_POST["klassekode"];
 
 if (isset($_POST["registrerStudentKnapp"])) {
 
