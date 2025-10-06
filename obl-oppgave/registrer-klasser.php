@@ -7,7 +7,7 @@
     <input type="submit" id="registrerKlasseKnapp" name="registrerKlasseKnapp" value="Registrer klasse">
 </form>
 
-<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
+<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button><br>
 
 
 <?php
@@ -35,7 +35,7 @@ if (isset($_POST["registrerKlasseKnapp"])) {
             $sqlSetning = "INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode');";
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen");
 
-            print ("Klassekode " . $klassekode . " med navn " . $klassenavn . " og studiumkode " . $studiumkode ." er nå registrert i databasen.");
+            print ("Følgende er nå lagt til i databasen:<br>Klassekode: $klassekode<br>Klassenavn: $klassenavn<br>Studiumkode: $studiumkode<br>");
         }
 
 
