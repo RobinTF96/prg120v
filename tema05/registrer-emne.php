@@ -14,7 +14,6 @@
 
 
 <?php
-header('Content-type: text/html; charset=utf-8');
 
 $emnekode = $_POST["emnekode"] ?? null;
 $emnenavn = $_POST["emnenavn"] ?? null;

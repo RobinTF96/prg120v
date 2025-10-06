@@ -10,11 +10,10 @@
     <input type="submit" id="registrerEmneKnapp" name="registrerEmneKnapp" value="Registrer emne">
 </form>
 
-<button type="button" onclick="window.location.href='oving-oppgave-5.html'">Tilbake</button>
+<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
 
 
 <?php
-header('Content-type: text/html; charset=utf-8');
 
 $emnekode = $_POST["emnekode"] ?? null;
 $emnenavn = $_POST["emnenavn"] ?? null;

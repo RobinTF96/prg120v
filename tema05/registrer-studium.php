@@ -11,7 +11,6 @@
 
 <?php
 include ("db-tilkobling.php");
-header('Content-type: text/html; charset=utf-8');
 
 if (isset($_POST["registrerStudiumKnapp"])) {
     $studiumkode = $_POST["studiumkode"];

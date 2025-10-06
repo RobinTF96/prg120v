@@ -10,7 +10,7 @@
     <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium"><br>
 </form>
 
-<button type="button" onclick="window.location.href='oving-oppgave-5.html'">Tilbake</button>
+<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
 
 
 <?php
