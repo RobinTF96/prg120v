@@ -12,9 +12,9 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
 
-$emnekode = $_POST["emnekode"];
-$emnenavn = $_POST["emnenavn"];
-$studiumkode = $_POST["studiumkode"];
+$emnekode = $_POST["emnekode"] ?? null;
+$emnenavn = $_POST["emnenavn"] ?? null;
+$studiumkode = $_POST["studiumkode"] ?? null;
 
 if (isset($_POST["registrerEmneKnapp"])) {
 
