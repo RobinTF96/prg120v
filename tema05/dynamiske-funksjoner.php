@@ -28,8 +28,4 @@ function listeboksEmnekode () {
         print ("<option value='$emnekode'>$emnekode $emnenavn</option>");
     }    
 }
-
-
-
-
 ?>
