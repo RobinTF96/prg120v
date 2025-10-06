@@ -1,5 +1,5 @@
 <?php
-include ("db-tilkobling.php");
+include ("tema05/db-tilkobling.php");
 
 $sqlSetning = "SELECT * FROM emne ORDER BY emnekode;";
 $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");

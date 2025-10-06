@@ -2,16 +2,16 @@
 
 <h3>Slett studium</h3>
 
-<form method="post" action="" id="slettStudiumSkjema" name="slettStudiumSkjema">
+<form method="post" action="" id="slettStudiumSkjema" name="slettStudiumSkjema" onSubmit="return bekreft()">
     Studiumkode: <input type="text" id="studiumkode" name="studiumkode" required><br>
-    <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium" onSubmit="return bekreft()">
+    <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium">
     <input type="reset" value="Nullstill" id="nullstill" name="nullstill"><br>
 </form>
 
 
 <?php
 if (isset($_POST["slettStudiumKnapp"])) {
-    include ("db-tilkobling.php");
+    include ("tema05/db-tilkobling.php");
     $studiumkode = $_POST["studiumkode"];
 
     $sqlSetning = "DELETE FROM studium WHERE studiumkode='$studiumkode';";
