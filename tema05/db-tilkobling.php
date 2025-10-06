@@ -4,7 +4,6 @@ $username = getenv('DB_USER');
 $password = getenv('DB_PASS');
 $database = getenv('DB_DATABASE');
 
-$db = mysqli_connect($host, $username, $password, $database) or die ("Kunne ikke koble til database: " . mysqli_error($db));
-
+$db = mysqli_connect($host, $username, $password, $database) or die ("Kunne ikke koble til databasen"););
 
 ?>
