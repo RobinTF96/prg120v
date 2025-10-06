@@ -4,8 +4,11 @@
     Studiumkode: <input type="text" id="studiumkode" name="studiumkode" required><br>
     Studiumnavn: <input type="text" id="studiumnavn" name="studiumnavn" required><br>
     <input type="submit" id="registrerStudiumKnapp" name="registrerStudiumKnapp" value="Registrer studium">
-    <input type="submit" value="tema05/oving-oppgaver-5.html" id="hjem" name="hjem"><br>
 </form>
+
+<form method="post" action="tema05/oving-oppgave-5.php" id="hjem" name="hjem">
+    <input type="submit" value="Tilbake" id="hjemKnapp" name="hjemKnapp">
+</form> <br>
 
 
 <?php
