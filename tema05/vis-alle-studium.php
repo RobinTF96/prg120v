@@ -14,7 +14,7 @@ for ($r = 1; $r <= $antallRader; $r++) {
     $studiumkode = $rad["studiumkode"];
     $studiumnavn = $rad["studiumnavn"];
 
-    print ("<tr> <td> $studiumkode </td> <td> $studiumnavn </td> <td> $studiumkode </td> </tr>");
+    print ("<tr> <td> $studiumkode </td> <td> $studiumnavn </td> </tr>");
 }
 print ("</table>");
 
