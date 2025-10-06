@@ -1,39 +1,42 @@
-<h3>Registrer studium</h3>
+<h3>Registrer klasse</h3>
 
-<form method="post" action="" id="registrerStudiumSkjema" name="registrerStudiumSkjema">
+<form method="post" action="" id="registrerKlasseSkjema" name="registrerKlasseSkjema">
+    Klassekode: <input type="text" id="klassekode" name="klassekode" required><br>
+    Klassenavn: <input type="text" id="klassenavn" name="klassenavn" required><br>
     Studiumkode: <input type="text" id="studiumkode" name="studiumkode" required><br>
-    Studiumnavn: <input type="text" id="studiumnavn" name="studiumnavn" required><br>
-    <input type="submit" id="registrerStudiumKnapp" name="registrerStudiumKnapp" value="Registrer studium">
+    <input type="submit" id="registrerKlasseKnapp" name="registrerKlasseKnapp" value="Registrer klasse">
 </form>
 
-<button type="button" onclick="window.location.href='oving-oppgave-5.html'">Tilbake</button>
+<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
 
 
 <?php
 include ("db-tilkobling.php");
 header('Content-type: text/html; charset=utf-8');
 
-if (isset($_POST["registrerStudiumKnapp"])) {
-    $studiumkode = $_POST["studiumkode"];
-    $studiumnavn = $_POST["studiumnavn"];
+if (isset($_POST["registrerKlasseKnapp"])) {
+    $klassekode = strtoupper($_POST["klassekode"]);
+    $klassenavn = $_POST["klassenavn"];
+    $studiumkode = strtoupper($_POST["studiumkode"]);
 
-    if (!$studiumkode || !$studiumnavn) {
+
+    if (!$klassekode || !$klassenavn || !$studiumkode) {
         print ("Alle felt må fylles ut");
     }
     else {
 
-        $sqlSetning = "SELECT * FROM studium WHERE studiumkode='$studiumkode';";
+        $sqlSetning = "SELECT * FROM klasse WHERE klassekode='$klassekode';";
         $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
         $antallRader = mysqli_num_rows($sqlResultat);
 
         if ($antallRader != 0) {
-            print ("Studiumkode $studiumkode er allerede registrert i databasen");
+            print ("Klassekode $klassekode er allerede registrert med klassenavn " . $klassenavn . " og studiumkode " . $studiumkode . " i databasen");
         }
         else {
-            $sqlSetning = "INSERT INTO studium (studiumkode, studiumnavn) VALUES ('$studiumkode', '$studiumnavn');";
+            $sqlSetning = "INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode');";
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen");
 
-            print ("Studiumkode $studiumkode med navn $studiumnavn er nå registrert i databasen.");
+            print ("Klassekode " . $klassekode . " med navn " . $klassenavn . " og studiumkode " . $studiumkode ." er nå registrert i databasen.");
         }
 
 
