@@ -13,13 +13,13 @@
 <?php
 if (isset($_POST["slettStudenterKnapp"])) {
     include ("db-tilkobling.php");
-    $brukernavn = $_POST["brukernavn"];
-    $antall = count($brukernavn);
 
-    if ($antall == 0) {
-        print ("Ingen studenter er valgt.");
-    }
-    else {
+    if (!empty($_POST["brukernavn"])) {
+        $brukernavn = $_POST["brukernavn"];
+        $antall = count($brukernavn);
+
+        $slettedeStudenter = [];
+
         for ($r = 0; $r < $antall; $r++) {
             $brukernavnValgt = $brukernavn[$r];
             $sqlHent = "SELECT fornavn, etternavn FROM student WHERE brukernavn='$brukernavnValgt';";
@@ -30,10 +30,13 @@ if (isset($_POST["slettStudenterKnapp"])) {
 
             $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavnValgt';";
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen");
+            $slettedeStudenter[] = "$fornavn $etternavn";
         }
-
-        print ("Student $fornavn $etternavn er nå slettet fra databasen.");
-}
+        
+        if (!empty($slettedeStudenter)) {
+            print ("Du har nå slettet følgende studenter fra databasen: " . implode(", ", $slettedeStudenter) . "."");
+        }
+    }
 }
 
 ?>
