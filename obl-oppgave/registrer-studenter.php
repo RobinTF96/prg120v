@@ -44,7 +44,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
         $antallRader = mysqli_num_rows($sqlResultat);
 
         if ($antallRader != 0) {
-            print ("Brukernavn $brukernavn er allerede registrert i databasen");
+            print ("Brukernavn \"$brukernavn\" er allerede registrert i databasen");
         }
         else {
             $sqlSetning = "INSERT INTO student (brukernavn, fornavn, etternavn, klassekode) VALUES ('$brukernavn', '$fornavn', '$etternavn', '$klassekode');";
