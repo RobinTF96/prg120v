@@ -17,11 +17,16 @@
 if (isset($_POST["slettStudentKnapp"])) {
     include ("db-tilkobling.php");
     $brukernavn = $_POST["brukernavn"];
+    $sqlHent = "SELECT fornavn, etternavn FROM student WHERE brukernavn='$brukernavn';";
+    $sqlStudentNavn = mysqli_query($db, $sqlHent);
+    $rad = mysqli_fetch_array($sqlStudentNavn);
+    $fornavn = $rad["fornavn"];
+    $etternavn = $rad["etternavn"];
 
     $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavn';";
     mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen");
 
-    print ("Student med brukernavn $brukernavn er nå slettet fra databasen.");
+    print ("Student $fornavn $etternavn er nå slettet fra databasen.");
 }
 
 ?>
