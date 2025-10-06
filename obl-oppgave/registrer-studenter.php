@@ -11,7 +11,7 @@
     <input type="submit" id="registrerStudentKnapp" name="registrerStudentKnapp" value="Registrer student">
 </form>
 
-<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button>
+<button type="button" onclick="window.location.href='obl-oppgave.html'">Tilbake</button><br>
 
 
 <?php
