@@ -10,7 +10,7 @@ print ("<table border=1>");
 print ("<tr> <th align=left>Studiumkode</th> <th align=left>Studiumnavn</th> </tr>");
 
 for ($r = 1; $r <= $antallRader; $r++) {
-    $rad = mysql_fetch_array($sqlResultat);
+    $rad = mysqli_fetch_array($sqlResultat);
     $studiumkode = $rad["studiumkode"];
     $studiumnavn = $rad["studiumnavn"];
 
