@@ -24,7 +24,7 @@ if (isset($_POST["registrerEmneKnapp"])) {
     else {
         include ("db-tilkobling.php");
 
-        $sqlSetning = "SELECT * FROM studium WHERE emnekode='$emnekode';";
+        $sqlSetning = "SELECT * FROM emne WHERE emnekode='$emnekode';";
         $sqlResultat = mysqli_query($db, $sqlSetning) or die ("Ikke mulig å hente data fra databasen");
         $antallRader = mysqli_num_rows($sqlResultat);
 
@@ -32,7 +32,7 @@ if (isset($_POST["registrerEmneKnapp"])) {
             print ("Emnekode $emnekode er allerede registrert i databasen");
         }
         else {
-            $sqlSetning = "INSERT INTO studium (emnekode, emnenavn) VALUES ('$emnekode', '$emnenavn');";
+            $sqlSetning = "INSERT INTO emne (emnekode, emnenavn) VALUES ('$emnekode', '$emnenavn');";
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen");
 
             print ("Emnekode $emnekode med navn $emnenavn er nå registrert i databasen.");
