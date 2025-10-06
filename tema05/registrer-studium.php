@@ -4,7 +4,7 @@
     Studiumkode: <input type="text" id="studiumkode" name="studiumkode" required><br>
     Studiumnavn: <input type="text" id="studiumnavn" name="studiumnavn" required><br>
     <input type="submit" id="registrerStudiumKnapp" name="registrerStudiumKnapp" value="Registrer studium">
-    <input type="reset" value="Nullstill" id="nullstill" name="nullstill"><br>
+    <input type="submit" value="tema05/oving-oppgaver-5.html" id="hjem" name="hjem"><br>
 </form>
 
 
