@@ -12,10 +12,11 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
 
+$emnekode = $_POST["emnekode"];
+$emnenavn = $_POST["emnenavn"];
+$studiumkode = $_POST["studiumkode"];
+
 if (isset($_POST["registrerEmneKnapp"])) {
-    $emnekode = $_POST["emnekode"];
-    $emnenavn = $_POST["emnenavn"];
-    $studiumkode = $_POST["studiumkode"];
 
     if (!$emnekode || !$emnenavn || !$studiumkode) {
         print ("Alle felt må fylles ut");
