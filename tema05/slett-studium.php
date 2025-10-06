@@ -6,6 +6,7 @@
     Studiumkode: <select id="studiumkode" name="studiumkode">
         <?php print ("<option value=>Velg studium</option>");
         include ("dynamiske-funksjoner.php"); listeboksStudiumkode(); ?>
+    </select><br>
     <input type="submit" id="slettStudiumKnapp" name="slettStudiumKnapp" value="Slett studium"><br>
 </form>
 

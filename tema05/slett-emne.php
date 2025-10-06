@@ -6,6 +6,7 @@
     Emne: <select id="emnekode" name="emnekode">
         <?php print ("<option value=>Velg emne</option>");
         include ("dynamiske-funksjoner.php"); listeboksEmnekode(); ?>
+    </select><br>
     <input type="submit" id="slettEmneKnapp" name="slettEmneKnapp" value="Slett emne"><br>
 </form>
 

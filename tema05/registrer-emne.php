@@ -3,7 +3,10 @@
 <form method="post" action="" id="registrerEmneSkjema" name="registrerEmneSkjema">
     Emnekode: <input type="text" id="emnekode" name="emnekode" required><br>
     Emnenavn: <input type="text" id="emnenavn" name="emnenavn" required><br>
-    Studiumkode: <input type="text" id="studiumkode" name="studiumkode" required><br>
+    Studiumkode: <select id="studiumkode" name="studiumkode" required>
+        <?php print ("<option value=>velg studium</option>");
+        include ("dynamiske-funksjoner.php"); listeboksStudiumkode(); ?>
+    </select><br>
     <input type="submit" id="registrerEmneKnapp" name="registrerEmneKnapp" value="Registrer emne">
     <input type="reset" value="Nullstill" id="nullstill" name="nullstill"><br>
 </form>
