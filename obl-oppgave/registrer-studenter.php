@@ -5,7 +5,7 @@
     Fornavn: <input type="text" id="fornavn" name="fornavn" required><br>
     Etternavn: <input type="text" id="etternavn" name="etternavn" required><br>
     Klassekode: <select id="klassekode" name="klassekode" required>
-        <?php print ("<option value=>Velg studium</option>");
+        <?php print ("<option value=>Velg klassekode</option>");
         include ("dynamiske-funksjoner.php"); listeboksKlassekode(); ?>
     </select><br>
     <input type="submit" id="registrerStudentKnapp" name="registrerStudentKnapp" value="Registrer student">
@@ -37,7 +37,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
             print ("Brukernavn $brukernavn er allerede registrert i databasen");
         }
         else {
-            $sqlSetning = "INSERT INTO emne (brukernavn, fornavn, etternavn, klassekode) VALUES ('$brukernavn', '$fornavn', '$etternavn', '$klassekode');";
+            $sqlSetning = "INSERT INTO student (brukernavn, fornavn, etternavn, klassekode) VALUES ('$brukernavn', '$fornavn', '$etternavn', '$klassekode');";
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å registrere data i databasen");
 
             print ("Følgende er nå lagt til i databasen:<br>Brukernavn: $brukernavn<br>Fornavn: $fornavn<br>Etternavn: $etternavn<br>Klassekode: $klassekode");
