@@ -16,7 +16,7 @@
 
 <?php
 
-$brukernavn = strtolower($_POST["brukernavn"]) ?? null;
+$brukernavn = strtolower($_POST["brukernavn"] ?? null);
 $fornavn = ucfirst(strtolower($_POST["fornavn"])) ?? null;
 $etternavn = ucfirst(strtolower($_POST["etternavn"])) ?? null;
 $klassekode = $_POST["klassekode"] ?? null;
