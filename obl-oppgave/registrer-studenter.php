@@ -16,10 +16,17 @@
 
 <?php
 
-$brukernavn = strtolower($_POST["brukernavn"] ?? null);
-$fornavn = ucfirst(strtolower($_POST["fornavn"] ?? null)) ;
-$etternavn = ucfirst(strtolower($_POST["etternavn"] ?? null)) ;
-$klassekode = $_POST["klassekode"] ?? null;
+
+$klassekode = $_POST["klassekode"];
+if (!empty($brukernavn)) {
+    $brukernavn = strtolower($_POST["brukernavn"]);
+}
+if (!empty($fornavn)) {
+    $fornavn = ucfirst(strtolower($_POST["fornavn"]));
+}
+if (!empty($etternavn)) {
+    $etternavn = ucfirst(strtolower($_POST["etternavn"]));
+}
 
 if (isset($_POST["registrerStudentKnapp"])) {
 
