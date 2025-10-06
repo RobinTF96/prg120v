@@ -1,4 +1,4 @@
-<script src="funksjoner.js"></script>
+<script src="tema05/funksjoner.js"></script>
 
 <h3>Slett studium</h3>
 
