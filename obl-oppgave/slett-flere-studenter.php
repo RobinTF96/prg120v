@@ -28,7 +28,7 @@ if (isset($_POST["slettStudenterKnapp"])) {
             $fornavn = $rad["fornavn"];
             $etternavn = $rad["etternavn"];
 
-            $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavn';";
+            $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavnValgt';";
             mysqli_query($db, $sqlSetning) or die ("Ikke mulig å slette data i databasen");
         }
 
